@@ -6,6 +6,7 @@ const connect = function () {
   });
   conn.on("connect", () => {
     console.log("Connected")
+    conn.write("Name: ML")
     
   })
   conn.on("data", (data) => {

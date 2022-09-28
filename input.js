@@ -1,4 +1,6 @@
-const setupInput = function () {
+let connection;
+const setupInput = (conn) => {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -10,9 +12,21 @@ const setupInput = function () {
 const handleUserInput = function (data) {
   console.log("DATA", data)
   if (data === '\u0003') {
-    process.exit();
+    process.exit(); // ctrl + c
   }
+  if (data === 'w') {
+    connection.write("Move: up")
+  }
+  if (data === 'a') {
+    connection.write("Move: left")
+  }
+  if (data === 's') {
+    connection.write("Move: domn")
+  }
+  if (data === 'd') {
+    connection.write("Move: right")
 
+  }
   // your code here
 };
-module.exports = {setupInput}
+module.exports = { setupInput }
