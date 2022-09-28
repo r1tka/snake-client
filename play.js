@@ -8,11 +8,14 @@ const connect = function () {
     port: 50541
   });
   conn.on("connect", () => {
-    console.log("Connected")
+    console.log("Successfully connected to game server")
+    conn.write("Name: ML");  
   })
+
   conn.on("data", (data) => {
     console.log("Data:", data)
   })
+  
   // interpret incoming data as text
   conn.setEncoding("utf8");
 

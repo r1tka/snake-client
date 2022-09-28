@@ -5,6 +5,7 @@ const connect = function () {
   });
   conn.on("connect", () => {
     console.log("Connected")
+    
   })
   conn.on("data", (data) => {
     console.log("Data:", data)
