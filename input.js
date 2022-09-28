@@ -21,12 +21,14 @@ const handleUserInput = function (data) {
     connection.write("Move: left")
   }
   if (data === 's') {
-    connection.write("Move: domn")
+    connection.write("Move: down")
   }
   if (data === 'd') {
     connection.write("Move: right")
-
   }
+  if (data === 'q') {
+    connection.write("Say: you good?");
   // your code here
 };
+}
 module.exports = { setupInput }
