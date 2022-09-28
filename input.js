@@ -27,7 +27,7 @@ const handleUserInput = function (data) {
     connection.write("Move: right")
   }
   if (data === 'q') {
-    connection.write("Say: you good?");
+    connection.write("Say: hi there");
   // your code here
 };
 }
