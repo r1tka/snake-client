@@ -1,7 +1,3 @@
-// this will serve my main file through which I will launch th game client
-const net = require("net");
-const connected = require(`./client`)
-// establishes a connection with the game server
 const connect = function () {
   const conn = net.createConnection({
     host: "165.227.47.243",
@@ -19,5 +15,4 @@ const connect = function () {
   return conn;
 };
 
-console.log("Connecting ...");
-connect();
+module.exports = connect
